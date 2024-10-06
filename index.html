@@ -3,458 +3,346 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Travel Agency</title>
+    <title>Final Project</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="/assets/images/graduation.png" type="image/png">
 
-<link rel="stylesheet"
-href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-<link rel="stylesheet" href="/bootstrap-5.3.3-dist/css/bootstrap.min.css" />
-<link rel="icon" href="/assets/images/airplane.png" type="image/png">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
 </head>
-<div>
-    <!-- Header Section -->
-    <header class="header-1">
-        <div class="contact-info">
-            <span class="email-one"><i class='bx bxs-envelope'></i> timelesstrails@gmail.com</span>
-            <span class="phone-one"><i class='bx bxs-phone'></i> +923867643423</span>
-        </div>
-        <div class="header-right">
-            <div class="search-bar">
-                <input type="text" placeholder="Search Here!">
-                <button class="search-btn"><i class='bx bx-search'></i></button>
-            </div>
-            <a href="#" class="login-btn">Register / Login</a>
-        </div>
-    </header>
+<body>
 
-    <header class="header-2">
-        <nav>
-            <div class="logo">Timeless Trails</div>
-            <input type="checkbox" class="menu-btn" id="menu-btn">
-        <label for="menu-btn" class="menu-icon">
-            <span class="nav-icon"></span>
-        </label>
-            <ul class="nav-links">
-                <li><a href="#" class="home-one">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Most Visited Places</a></li>
-                <li><a href="#">Reviews</a></li>
-                <li><a href="#">Contact</a></li>
-                <div><li><a href="#" id="clip"><i class='bx bx-clipboard'></i></a></li></div>
-            </ul>
-        </nav>
-    </header>
-
-    <!-- hero-section -->
-
-    <section class="hero">
-        <div class="hero-content">
-            <h3>Books Your Tickets Now And Enjoy The Beauty Of This World...</h3>
-            <h1>Timeless Trails</h1>
-            <p>"Adventure awaits. Let’s go!"</p>
-            <a href="#" class="main-button">For More Info Click Here !   <i class='bx bx-right-arrow-alt'></i></a>
-        </div>
-    </section>
-
-    <!-- feature-section -->
-
-    <div class="features-section">
-        <div class="feature">
-            <div class="icon">
-                <img src="/assets/images/tour-guide.png" alt="Expert Icon"> 
-            </div>
-            <h3>Travel With Experts</h3>
-            <p>Our travel guides are experienced professionals ensuring your trip is smooth and enjoyable.</p>
-            <a href="#">Learn More <i class='bx bx-right-arrow-alt'></i></a>
-        </div>
-        <div class="feature">
-            <div class="icon">
-                <img src="/assets/images/library.png" alt="Library Icon"> 
-            </div>
-            <h3>Destination Library</h3>
-            <p>Explore our extensive library of travel destinations and choose your next adventure.</p>
-            <a href="#">Browse Destinations <i class='bx bx-right-arrow-alt'></i></a>
-        </div>
-        <div class="feature">
-            <div class="icon">
-                <img src="/assets/images/vacation.png" alt="Course Icon"> 
-            </div>
-            <h3>Best Travel Packages</h3>
-            <p>Find the best travel packages online, tailored to your preferences and budget.</p>
-            <a href="#">View Packages <i class='bx bx-right-arrow-alt'></i></a>
-        </div>
-        <div class="feature">
-            <div class="icon">
-                <img src="/assets/images/trust.png" alt="Leader Icon">
-            </div>
-            <h3>Trusted Travel Leaders</h3>
-            <p>We partner with top travel leaders to provide you with the best service and experience.</p>
-            <a href="#">Meet Our Partners <i class='bx bx-right-arrow-alt'></i></a>
-        </div>
-    </div>
-
-    <!-- Most Visited Places -->
-    <div class="view-all">
-        <a href="#">View All Places <i class='bx bx-right-arrow-alt'></i></a>
-    </div>
-    <div class="place-container">
-        <h2>Most Visited Places</h2>
-        <div class="most-visited-places">
-            <div class="places">
-                <img src="/assets/images/Islamabad.jpeg" alt="Place 1">
-                <div class="place-info">
-                    <div class="ratting">
-                        <i class='bx bxs-star' ></i>
-                        <i class='bx bxs-star' ></i>
-                        <i class='bx bxs-star' ></i>
-                        <i class='bx bxs-star' ></i>
-                        <i class='bx bxs-star-half' ></i> <span>[11k Votes]</span>
-                    </div>
-                    <h3>Islamabad (Pakistan)</h3>
-                    <p>Booking From October [2024]</p>
-                    <p class="price">$100 PER DAY</p>
-                </div>
-            </div>
-            <div class="places">
-                <img src="/assets/images/Mecca.jpeg" alt="place 2">
-                <div class="place-info">
-                    <div class="ratting">
-                        <i class='bx bxs-star' ></i>
-                        <i class='bx bxs-star' ></i>
-                        <i class='bx bxs-star' ></i>
-                        <i class='bx bxs-star' ></i>
-                        <i class='bx bxs-star' ></i> <span>[25.8k Votes]</span>
-                    </div>
-                    <h3>Mecca (Saudi Arabia)</h3>
-                    <p>Booking From December [2024]</p>
-                    <p class="price">$40 PER DAY <span class="original-price">$160 PER DAY</span></p>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-
-    <!-- about-section -->
-
-    <div class="about-container">
-        <div class="about-info">
-            <h2>About Timeless Trails</h2>
-            <p>Timeless Trails is your gateway to discovering unforgettable journeys across the world. From the hidden gems of local cultures to the breathtaking beauty of natural wonders, we bring you the most immersive travel experiences. Join us as we explore the untold stories and timeless paths that connect us to the world.</p>
-            <div class="stats">
-                <div>
-                    <h3>7M+</h3>
-                    <p>Travelers Exploring</p>
-                </div>
-                <div>
-                    <h3>300+</h3>
-                    <p>Destinations Available</p>
-                </div>
-                <div>
-                    <h3>10M+</h3>
-                    <p>Journeys Completed</p>
-                </div>
-                <div>
-                    <h3>20+</h3>
-                    <p>Countries Covered</p>
-                </div>
-            </div>
-        </div>
-        <div class="about-image">
-            <img src="/assets/images/full-shot-parents-kid-traveling.jpg" alt="Travel Image">
-            <div class="play-button"><i class='bx bx-play'></i></div>
-        </div>
-    </div>
-
-    <!-- testimonial-sliders -->
-    <div class="testimonial-sliders">
-
-        <input type="radio" id="testimonial1" name="slider" checked>
-        <input type="radio" id="testimonial2" name="slider">
-        <input type="radio" id="testimonial3" name="slider">
-    
-        <div class="container">
-            <div class="testimonials">
-                <div class="images">
-                    
-                    <img src="/assets/images/testimonial 1.jpg" alt="Person 1" class="testimonial1" height="100px" width="100px" >
-                   
-                    <img src="/assets/images/testimonial 2.jpg" alt="Person 2" class="testimonial2" height="100px" width="100px">
-                    
-                    <img src="/assets/images/testimonial 3.jpg" alt="Person 3" class="testimonial3" height="100px" width="100px">
-                </div>
-    
-                <div class="texts">
-                    <div class="testimonial testimonial1">
-                        <p>Timeless Trails crafted an unforgettable journey with seamless planning and incredible experiences every step of the way!</p>
-                        <h4>EMMA SMITH <span id="s1">Adventure Seeker [USA]</span></h4>
-                    </div>
-                    <div class="testimonial testimonial2">
-                        <p>Thanks to Timeless Trails, my vacation was stress-free and packed with unforgettable experiences. Highly recommend them for any trip!</p>
-                        <h4>DAVID WILLIAMS <span id="s1">Explorer [Turkey]</span></h4>
-                    </div>
-                    <div class="testimonial testimonial3">
-                        <p>I can't thank Timeless Trails enough for the personalized itinerary. They truly know how to craft a perfect travel experience!</p>
-                        <h4>ALICE SMITH <span id="s1">World Traveler [France]</span></h4>
-                    </div>
-                    <i class='bx bxs-quote-alt-right'></i>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Most-visited-places-2 -->
-<div class="plc-2">
-    <div class="most-visited-places-two">
-        <div class="categories">
-        <h2 class="place-h2">Most Visited Places</h2>
-        <div class="div-cate">
-            <a href="#">All</a>
-            <a href="#">Destinations</a>
-            <a href="#">Luxury Travel</a>
-            <a href="#">Budget Travel</a>
-            <a href="#">Family Trips</a>
-        </div>
-        </div>
-        <div class="places-grid">
-            <div class="places-card">
-                <img src="/assets/images/Dubai.jpeg" alt="Place 3">
-                <div class="place-info">
-                    <h3>Dubai (UAE)</h3>
-                    <p>Booking From November [2024]</p>
-                    <p class="price">$200 PER DAY</p>
-                    <div class="ratting">
-                        <i class='bx bxs-star' ></i>
-                        <i class='bx bxs-star' ></i>
-                        <i class='bx bxs-star' ></i>
-                        <i class='bx bxs-star' ></i>
-                        <i class='bx bxs-star-half' ></i> <span>[8.7k Votes]</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="places-card">
-                <img src="/assets/images/Istambul.jpeg" alt="Place 4">
-                <div class="place-info">
-                    <h3>Istanbul (Turkey)</h3>
-                    <p>Booking From Febuary [2025]</p>
-                    <p class="price">$30 PER DAY <span class="original-price">$120 PER DAY</span></p>
-                    <div class="ratting">
-                        <i class='bx bxs-star' ></i>
-                        <i class='bx bxs-star' ></i>
-                        <i class='bx bxs-star' ></i>
-                        <i class='bx bxs-star' ></i>
-                        <i class='bx bxs-star-half' ></i> <span>[9.5k Votes]</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="places-card">
-                <img src="/assets/images/London.jpg" alt="place 5">
-                <div class="place-info">
-                    <h3>London (UK)</h3>
-                    <p>Booking From October [2024]</p>
-                    <p class="price">$110 PER DAY</p>
-                    <div class="ratting">
-                        <i class='bx bxs-star' ></i>
-                        <i class='bx bxs-star' ></i>
-                        <i class='bx bxs-star' ></i>
-                        <i class='bx bxs-star' ></i>
-                        <i class='bx bxs-star-half' ></i> <span>[4k Votes]</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="places-card">
-                <img src="/assets/images/New york.jpg" alt="place 6">
-                <div class="place-info">
-                    <h3>New York (USA)</h3>
-                    <p>Booking From January [2025]</p>
-                    <p class="price">$180 PER DAY <span class="original-price">$230 PER DAY</span></p>
-                    <div class="ratting">
-                        <i class='bx bxs-star' ></i>
-                        <i class='bx bxs-star' ></i>
-                        <i class='bx bxs-star' ></i>
-                        <i class='bx bxs-star' ></i>
-                        <i class='bx bxs-star-half' ></i> <span>[8k Votes]</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="places-card">
-                <img src="/assets/images/Paris.jpeg" alt="place 7">
-                <div class="place-info">
-                    <h3>Paris (France)</h3>
-                    <p>Booking From March [2025]</p>
-                    <p class="price">$300 PER DAY</p>
-                    <div class="ratting">
-                        <i class='bx bxs-star' ></i>
-                        <i class='bx bxs-star' ></i>
-                        <i class='bx bxs-star' ></i>
-                        <i class='bx bxs-star' ></i>
-                        <i class='bx bxs-star-half' ></i> <span>[10.2k Votes]</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="places-card">
-                <img src="/assets/images/Taj Mahal.jpg" alt="place 8">
-                <div class="place-info">
-                    <h3>Taj Mahal (India)</h3>
-                    <p>Booking From December [2024]</p>
-                    <p class="price">$60 PER DAY <span class="original-price">$90 PER DAY</span></p>
-                    <div class="ratting">
-                        <i class='bx bxs-star' ></i>
-                        <i class='bx bxs-star' ></i>
-                        <i class='bx bxs-star' ></i>
-                        <i class='bx bxs-star' ></i>
-                        <i class='bx bxs-star-half' ></i> <span>[1k Votes]</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <button class="view-all-btn">View All Places <i class='bx bx-right-arrow-alt'></i></button>
-    </div>
-</div>
-
-<!-- news-section -->
-
-<div class="news-container">
-    <h1 class="new-h1">Latest News & Events</h1>
-    <div class="news-events">
-        <div class="event-large">
-            <img src="/assets/images/main news.jpg" alt="new 1">
-            <div class="event-date">
-                <span class="date-main">23</span>
-                <span class="month">MAR</span>
-            </div>
-            <div class="event-info">
-                <h2>The Complete South American Adventure Tour</h2>
-                <p><span class="location"><i class='bx bx-current-location'></i> 40 Street Plaza, New York City [US]</span> <i class='bx bxs-calendar'></i><span class="date-range"> 10 Dec - 12 Dec</span></p>
-            </div>
-        </div>
-
-        <div class="event-list">
-            <div class="event-small">
-                <div class="event-img">
-                    <img src="/assets/images/Alps.jpg" alt="new 2">
-                </div>
-                <div class="event-info-small">
-                    <span class="date"><i class='bx bxs-calendar'></i> 22 MAR 2018</span>
-                    <h3 class="review">Top 10 Hiking Trails in the Alps</h3>
-                    <p class="author"><span class="author-name">Ms. Asha</span> <i>/ 19 Comments</i></p>
-                    <p>"Discover the most scenic and adventurous hiking trails in the Alps."</p>
-                </div>
-            </div>
-
-            <div class="event-small">
-                <div class="event-img">
-                    <img src="/assets/images/Japan.jpg" alt="new 3">
-                </div>
-                <div class="event-info-small">
-                    <span class="date"> <i class='bx bxs-calendar'></i> 22 MAR 2018</span>
-                    <h3 class="review">Why You Should Visit Japan in Spring</h3>
-                    <p class="author"><span class="author-name">Mr. Smith</span> <i>/ 25 Comments</i></p>
-                    <p>"Cherry blossoms and peaceful temples make Japan a perfect spring destination."</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- gallery section -->
-<div class="images-box">
-<div class="flex-container">
-    <div class="item large"><img src="/assets/images/img1.jpeg" alt="Image 1"></div>
-    <div class="item small"><img src="/assets/images/img2.jpeg" alt="Image 2"></div>
-    <div class="item medium"><img src="/assets/images/img3.jpeg" alt="Image 3"></div>
-    <div class="item smaill"><img src="/assets/images/img4.jpeg" alt="Image 4"></div>
-    <div class="item medium"><img src="/assets/images/img5.jpeg" alt="Image 5"></div>
-    <div class="item large"><img src="/assets/images/img6.jpeg" alt="Image 6"></div>
-    <div class="item small"><img src="/assets/images/img7.jpeg" alt="Image 7"></div>
-    <div class="item medium"><img src="/assets/images/img8.jpeg" alt="Image 8"></div>
-    <div class="item small"><img src="/assets/images/img9.jpeg" alt="Image 9"></div>
-    <div class="item medium"><img src="/assets/images/img13.jpeg" alt="Image 10"></div>
-    <div class="item large"><img src="/assets/images/img10.jpeg" alt="Image 11"></div>
-    <div class="item small"><img src="/assets/images/img11.jpeg" alt="Image 11"></div>
-    <div class="item medium"><img src="/assets/images/img12.jpeg" alt="Image 13"></div>
-    <div class="item small"><img src="/assets/images/img14.jpeg" alt="Image 14"></div>
-  </div>
-</div>
-
-
-<!-- sponser-section -->
- 
-<div class="logo-container">
-    <a href="#"><i class='bx bxl-steam'></i>  Steam</a>
-    <a href="#"><i class='bx bxl-unity' ></i>  Unity</a>
-    <a href="#"><i class='bx bxl-opera'></i>  Opera</a>
-    <a href="#"><i class='bx bxl-bootstrap'></i>  Bootstrap</a>
-    <a href="#"><i class='bx bxl-react'></i>  React</a>
-</div>
-
-<!-- footer-section -->
-
-<footer>
-    <div class="footer-container">
-        <div class="footer-section">
-            <h2>Timeless Trails</h2>
-            <p>Timeless Trails is your gateway to discovering unforgettable journeys across the world. From the hidden gems of local cultures to the breathtaking beauty of natural wonders, we bring you the most immersive travel experiences.</p>
-            <p>&copy; 2024 All rights reserved | This template is made with <span><i class='bx bxs-heart'></i></span> by <span>Timeless Trails</span></p>
-        </div>
-
-        <div class="footer-section">
-            <h3>Contact Us</h3>
-            <p class="end-e"><i class='bx bxs-envelope' ></i> timelesstrails@gmail.com</p>
-            <p class="end-p"><i class='bx bxs-phone'></i> +923867643423</p>
-            <p class="end-l"><i class='bx bx-current-location' ></i> 40 Street Plaza, New York City [US]</p>
-        </div>
-
-        <div class="footer-section">
-            <h3>Quick Links</h3>
+    <!-- Navigation -->
+     <nav>
+        <img src="/Assets/images/logo.svg" alt="">
+        <div class="navigation">
             <ul>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Terms of Use</a></li>
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Contact Us</a></li>
-                <li><a href="#">Booking</a></li>
-                <li><a href="#">Family Packages</a></li>
-                <li><a href="#">Popular Places</a></li>
-                <li><a href="#">Ticket's Price</a></li>
+                <i id="menu-close" class="fa-sharp fa-solid fa-xmark"></i>
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="Course.html">Courses</a></li>
+                <li><a href="contact.hmtl">Contact</a></li>
             </ul>
+            <img src="/Assets/images/menu.png" alt="" id="menu-btn">
         </div>
+     </nav>
 
-        <div class="footer-section">
-            <h3>Follow Us</h3>
-            <div class="social-icons">
-                <a href="#"><img src="/assets/images/facebook.png" alt="facebook"></a>
-                <a href="#"><img src="/assets/images/instagram.png" alt="instagram"></a>
-                <a href="#"><img src="/assets/images/google-plus.png" alt="google +"></a>
-                <a href="#"><img src="/assets/images/twitter.png" alt="twitter"></a>
+     <!-- Hero-section -->
+
+     <section id="home">
+        <h2>Enhance Your Future With Tech Educa</h2>
+        <p>Welcome to Tech Educa! Unlock the power of technology with our expert tutorials, guides, and resources. Whether you're a beginner or a pro, we're here to help you learn, innovate, and succeed in the ever-evolving world of tech. Dive in and start your journey towards mastering tomorrow's tech skills today!</p>
+        <div class="btn">
+            <a href="#" class="blue">Learn More</a>
+            <a href="#" class="yellow">Visit Courses</a>
+        </div>
+     </section>
+
+     <!-- Feature-section -->
+
+     <section id="features">
+        <h1>Awesome features</h1>
+        <p>Empowering your tech journey with expert insights and practical learning.</p>
+        <div class="fea-base">
+            <div class="fea-box">
+                <i class="fa-sharp fa-solid fa-graduation-cap"></i>
+                <h3>Scholarship Facility</h3>
+                <p>Unlock your potential with the Tech Educa Scholarship—apply today!</p>
+            </div>
+            <div class="fea-box">
+                <i class="fa-solid fa-book"></i>
+                <h3>Resourse Library</h3>
+                <p>Access our Resource Library for essential tech ebooks and tools!</p>
+            </div>
+            <div class="fea-box">
+                <i class="fa-sharp-duotone fa-solid fa-award"></i>
+                <h3>Global Certifications</h3>
+                <p>Get globally recognized certification to elevate your tech career!</p>
             </div>
         </div>
-    </div>
+     </section>
 
-    <div class="footer-bottom">
-    <div>
-        <a href="#"><img src="/assets/images/appstore-btn.png" alt="App Store"></a>
-        <a href="#"><img src="/assets/images/googleplay-btn.png" alt="Google Play"></a>
-    </div>
-        <div class="bottom-links">
-            <a href="#" class="b1">DPA</a><a href="#" class="b2">Terms of Use</a><a href="#" class="b3">Privacy Policy</a>
+     <!-- Popular-Courses -->
+      <section id="course">
+        <h1>Popular Courses</h1>
+        <p>Empowering your tech journey with expert insights and practical learning.</p>
+        <div class="course-box">
+
+            <div class="courses">
+                <img src="/Assets/images/c1.jpg" alt="">
+                <div class="details">
+                    <span>Updated 24/9/2023</span>
+                    <h6>JavaScript Beginners Course</h6>
+                    <div class="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <span>[478]</span>
+                    </div>
+                </div>
+                <div class="cost">
+                    $49.99
+                </div>
+            </div>
+
+            <div class="courses">
+                <img src="/Assets/images/c2.jpg" alt="">
+                <div class="details">
+                    <span>Updated 24/9/2023</span>
+                    <h6>CSS Beginners Course</h6>
+                    <div class="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <span>[432]</span>
+                    </div>
+                </div>
+                <div class="cost">
+                    $32.99
+                </div>
+            </div>
+
+            <div class="courses">
+                <img src="/Assets/images/c3.jpg" alt="">
+                <div class="details">
+                    <span>Updated 24/9/2023</span>
+                    <h6>Python Advance Course</h6>
+                    <div class="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <span>[354]</span>
+                    </div>
+                </div>
+                <div class="cost">
+                    $75.00
+                </div>
+            </div>
+
+            <div class="courses">
+                <img src="/Assets/images/c4.jpg" alt="">
+                <div class="details">
+                    <span>Updated 24/9/2023</span>
+                    <h6>UX / UI Design Full Course</h6>
+                    <div class="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <span>[278]</span>
+                    </div>
+                </div>
+                <div class="cost">
+                    $28.99
+                </div>
+            </div>
+
+            <div class="courses">
+                <img src="/Assets/images/c5.jpg" alt="">
+                <div class="details">
+                    <span>Updated 24/9/2023</span>
+                    <h6>Freelancing Full Course</h6>
+                    <div class="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <span>[374]</span>
+                    </div>
+                </div>
+                <div class="cost">
+                    $30.99
+                </div>
+            </div>
+
+            <div class="courses">
+                <img src="/Assets/images/c6.jpg" alt="">
+                <div class="details">
+                    <span>Updated 24/9/2023</span>
+                    <h6>Angular Programming Course</h6>
+                    <div class="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <span>[401]</span>
+                    </div>
+                </div>
+                <div class="cost">
+                    $51.99
+                </div>
+            </div>
+
         </div>
-    </div>
-</footer>
-    <script src="script.js"></script>
+      </section>
+
+      
+ <!-- Registration  -->
+
+      <section id="registration">
+        <div class="reminder">
+            <p>Get 100+ Online Courses for Free</p>
+            <h1>Register To Get It</h1>
+            <div class="time">
+                <div class="date">
+                    18 <br> Days
+                </div>
+                <div class="date">
+                    23 <br> Hours
+                </div>
+                <div class="date">
+                    06 <br> Minutes
+                </div>
+                <div class="date">
+                    58 <br> Seconds
+                </div>
+            </div>
+        </div>
+
+
+        <div class="form">
+            <h3>Create Free Account Now!</h3>
+            <input type="text" placeholder="Name">
+            <input type="text" placeholder="Email Address">
+            <input type="text" placeholder="Phone Number">
+            <div class="btn">
+                <a href="#" class="yellow">Submit Form</a>
+            </div>
+        </div>
+      </section>
+
+<!-- experts -->
+
+      <section id="experts">
+        <h1>Community Experts</h1>
+        <p>Empowering your tech journey with expert insights and practical learning.</p>
+        <div class="expert-box">
+
+            <div class="profile">
+                <img src="/Assets/images/pro1.webp" alt="">
+                <h6>Ema Irnik</h6>
+                <p>Python & Algorithm Expert</p>
+                <div class="pro-links">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </div>
+            </div>
+
+            <div class="profile">
+                <img src="/Assets/images/pro2.webp" alt="">
+                <h6>Jason</h6>
+                <p>Data Analyst</p>
+                <div class="pro-links">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </div>
+            </div>
+
+            <div class="profile">
+                <img src="/Assets/images/pro3.webp" alt="">
+                <h6>Malik</h6>
+                <p>Mern Stack Developer</p>
+                <div class="pro-links">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </div>
+            </div>
+
+            <div class="profile">
+                <img src="/Assets/images/pro4.webp" alt="">
+                <h6>Jennifer</h6>
+                <p>UI / UX Designer</p>
+                <div class="pro-links">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </div>
+            </div>
+ 
+        </div>   
+      </section>
+
+      <!-- Footer-section -->
+
+      <footer>
+        <div class="footer-col">
+            <h3>Top Products</h3>
+            <li>Online Courses</li>
+            <li>Ebooks & Guides</li>
+            <li>Career Services</li>
+            <li>Tech Tools & Software</li>
+        </div>
+        <div class="footer-col">
+            <h3>Quick Links</h3>
+            <li>Support</li>
+            <li>FAQS</li>
+            <li>Privacy Policy</li>
+            <li>Terms of Service</li>
+        </div>
+        <div class="footer-col">
+            <h3>Features</h3>
+            <li>Scholarship Opportunities</li>
+            <li>Certification Programs</li>
+            <li>Resource Library Accesss</li>
+            <li>Popular Courses</li>
+        </div>
+        <div class="footer-col">
+            <h3>Resources</h3>
+            <li>Guides</li>
+            <li>Cheat Sheets</li>
+            <li>API Documentation</li>
+            <li>Tool Reviews</li>
+        </div>
+
+        <div class="footer-col">
+            <h3>Newsletter</h3>
+            <p>You Can Trust Us. We Only Send Promo Offers!</p>
+            <div class="subscribe">
+                <input type="text"  placeholder="Your Email Address" id="">
+                <a href="#" class="yellow">SUBSCRIBE</a>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>Copyright &copy; 2024 All rights reserved | This template is made with <span><i class="fa-solid fa-heart"></i></span> by <span>Tech Educa</span></p>
+            <div class="pro-links">
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-linkedin-in"></i>
+            </div>
+        </div>
+      </footer>
+
+
+
+
+      <script>
+        $('#menu-btn').click(function() {
+            $('nav .navigation ul').addClass('active');
+        });
+    
+        $('#menu-close').click(function() {
+            $('nav .navigation ul').removeClass('active');
+        });
+    </script>
 </body>
 </html>
