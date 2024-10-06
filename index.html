@@ -216,13 +216,13 @@
         </div>
 
 
-        <div class="form">
+        <div class="form" id="form">
             <h3>Create Free Account Now!</h3>
-            <input type="text" placeholder="Name">
-            <input type="text" placeholder="Email Address">
-            <input type="text" placeholder="Phone Number">
+            <input type="text" placeholder="Name" id="username">
+            <input type="text" placeholder="Email Address" id="email">
+            <input type="text" placeholder="Phone Number" id="phone">
             <div class="btn">
-                <a href="#" class="yellow">Submit Form</a>
+                <a href="#" class="yellow" id="submit" type="submit">Submit Form</a>
             </div>
         </div>
       </section>
@@ -317,8 +317,8 @@
             <h3>Newsletter</h3>
             <p>You Can Trust Us. We Only Send Promo Offers!</p>
             <div class="subscribe">
-                <input type="text"  placeholder="Your Email Address" id="">
-                <a href="#" class="yellow">SUBSCRIBE</a>
+                <input type="text" placeholder="Your Email Address" id="sub-email">
+                <a href="#" class="yellow" id="subscribe-btn">SUBSCRIBE</a>
             </div>
         </div>
 
@@ -343,6 +343,71 @@
         $('#menu-close').click(function() {
             $('nav .navigation ul').removeClass('active');
         });
+        // Add event listener to the anchor tag
+    document.getElementById("submit").addEventListener("click", function(event) {
+        event.preventDefault(); // Prevent the default anchor behavior (navigation)
+
+        // Get values from the form inputs
+        var username = document.getElementById("username").value;
+        var email = document.getElementById("email").value;
+        var phoneNumber = document.getElementById("phone").value;
+
+        // Basic form validation to check if fields are not empty
+        if (!username || !email || !phoneNumber) {
+            alert("Please fill in all fields.");
+            return;
+        }
+
+        // Create a user object
+        const user = {
+            username: username,
+            email: email,
+            phone: phoneNumber
+        };
+
+        // Check if the username already exists in local storage (optional)
+        const existingUser = localStorage.getItem(username);
+        if (existingUser) {
+            alert("Username already exists. Please choose another.");
+            return;
+        }
+
+        // Store the user object in local storage
+        localStorage.setItem(username, JSON.stringify(user));
+
+        // Confirm account creation
+        alert("Account created successfully!");
+
+        // Optional: Redirect to another page
+        window.location.href = "index.html";
+    });
+
+
+    document.getElementById("subscribe-btn").addEventListener("click", function(event) {
+        event.preventDefault(); // Prevent default anchor action
+    
+        var subEmail = document.getElementById("sub-email").value.trim(); // Get the email input value
+    
+        // Simple email validation
+        if (subEmail !== "" && subEmail.indexOf("@") !== -1 && subEmail.indexOf(".") !== -1) {
+            // Get existing emails from local storage or initialize an empty array
+            var emails = JSON.parse(localStorage.getItem("subscribers")) || [];
+            
+            // Add the new email if it's not already in the list
+            if (!emails.includes(subEmail)) {
+                emails.push(subEmail); // Add email to the array
+                localStorage.setItem("subscribers", JSON.stringify(emails)); // Save updated array
+                alert("Thank you for subscribing!"); // Show confirmation
+                document.getElementById("sub-email").value = ""; // Clear the input field
+            } else {
+                alert("This email is already subscribed."); // Alert if email is already present
+            }
+        } else {
+            alert("Please enter a valid email address."); // Show error message
+        }
+    });
+</script>
+
     </script>
 </body>
 </html>
