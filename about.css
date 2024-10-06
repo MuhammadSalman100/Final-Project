@@ -74,7 +74,7 @@ nav .navigation ul li a:active , nav .navigation ul li a:hover {
 }
 #home {
   background-image: linear-gradient(rgba(9, 5, 54, 0.3), rgba(5, 4, 46, 0.7)),
-    url("images/img-1.jpg");
+    url("assets/images/img-1.jpg");
   clip-path: polygon(
     100% 100,
     90% 0,
