@@ -24,6 +24,7 @@ h6{
 }
 
 
+/* navigation */
 nav{
     position: fixed;
     width: 100%;
@@ -56,12 +57,10 @@ nav .navigation ul{
     display: flex;
     justify-content: flex-end;
     align-self: center;
-    margin-right: 150px;
-
 }
 nav .navigation ul li{
     list-style: none;
-    margin-left: 40px;
+    margin-left: 30px;
 }
 nav .navigation ul li a{
     text-decoration: none;
@@ -69,7 +68,6 @@ nav .navigation ul li a{
     font-size: 16px;
     font-weight: 500;
     transition: 0.3s ease;
-
 }
 nav .navigation ul li a.active,
 nav .navigation ul li a:hover{
@@ -299,6 +297,33 @@ footer .copyright .pro-links i{
 footer .copyright .pro-links i:hover{
     background-color: #fdc93B;
     color: rgb(21, 21, 100);
+}
+
+footer .copyright .pro-links i{
+    cursor: pointer;
+    transition: 0.3s ease;
+    background-color: #334f6c;
+    color: #fff;
+}
+footer .copyright .pro-links i:hover{
+    background-color: #fdc93B;
+    color: rgb(21, 21, 100);
+}
+
+.pro-links{
+    margin-top: 10px;
+}
+.pro-links i{
+    padding: 10px 13px;
+    border: 1px solid rgb(21, 21, 100);
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.pro-links i:hover{
+    background: rgb(21, 21, 100);
+    color: #fff;
+    border: 1px solid rgb(21, 21, 100);
+    cursor: pointer;
 }
 
 
