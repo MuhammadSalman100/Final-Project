@@ -289,6 +289,21 @@ footer .copyright p{
 footer .copyright p span{
     color: #fdc93B;
 }
+.pro-links{
+    margin-top: 10px;
+}
+.pro-links i{
+    padding: 10px 13px;
+    border: 1px solid rgb(21, 21, 100);
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.pro-links i:hover{
+    background: rgb(21, 21, 100);
+    color: #fff;
+    border: 1px solid rgb(21, 21, 100);
+    cursor: pointer;
+}
 
 footer .copyright .pro-links i{
     cursor: pointer;
