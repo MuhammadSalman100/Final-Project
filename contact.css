@@ -56,13 +56,12 @@ nav .navigation ul{
     display: flex;
     justify-content: flex-end;
     align-self: center;
-    margin-right: 100px;
+    margin-right: 150px;
 
 }
 nav .navigation ul li{
     list-style: none;
-
-    margin-left: 30px;
+    margin-left: 40px;
 }
 nav .navigation ul li a{
     text-decoration: none;
@@ -206,6 +205,7 @@ nav .navigation ul li a:hover{
     width: 35px;
     color: white;
     font-size: 25px;
+    margin: 20px;
     text-align: center;
     background-color: #5838fc;
     border: 2px solid #5838fc;    
