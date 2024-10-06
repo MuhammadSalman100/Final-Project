@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css  ">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="/assets/images/graduation.png" type="image/png">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav>
+        <img src="https://raw.githubusercontent.com/MuhammadSalman100/Final-Project/406e82f068cfee0d03cf898e0bb25eb123d726d8/Assets/images/logo.svg" alt="" on onclick="window.location.href='index.html';">
+        <div class="navigation">
+            <ul>
+                <i id="menu-close" class="fa-sharp fa-solid fa-xmark"></i>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a class="active" href="course.html">Courses</a></li>
+                <li><a href="contact.hmtl">Contact</a></li>
+            </ul>
+            <img src="https://github.com/MuhammadSalman100/Final-Project/blob/main/Assets/images/menu.png?raw=true" alt="" id="menu-btn">
+        </div>
+     </nav>
+
+
+    <div class="contact-pic">
+        <p class="con">Contact</p>
+    </div>
+    <section id="contact">
+        <div class="getin">
+            <h2>Get in touch</h2>
+            <p>Looking for help fill the form and start a new adventure. </p>
+            
+            <div class="getin-details">
+                <h3>Headquarters</h3>
+                <div>
+                    <i class="fa-solid fa-house"></i>
+                    <p>744 New York Ave, Brookyn, kings, New York 10224</p>
+                </div>
+                <h3>Phone</h3>
+                <div>
+                    <i class="fa-solid fa-phone"></i>
+                    <p> 02334434454554 <br> 232324455555</p>
+                </div>
+                <h3>Support</h3>
+                <div>
+                    <i class="fa-solid fa-envelope"></i>
+                    <p> tech@fjgfgjfgnf.com  | 121223@mail.com</p>
+                </div>
+                <h3>Follow Us</h3>
+                <div class="pro-links">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-linkedin"></i>
+                    <i class="fa-brands fa-stripe"></i>
+                    <!-- 4 links  -->
+                </div>
+            </div>
+        </div>
+        <div class="form">
+            <h4>Let's Connect </h4>
+            <p>Integer at lorem eget diam facilidss as id mass ed</p>
+            <div class="form-row">
+                <input type="text" placeholder="Your Name">
+                <input type="text" placeholder="Email">
+            </div>
+            <div class="form-col">
+                <input type="text" placeholder="Subject">
+            </div>
+            <div class="form-col">
+                <textarea name="" id="" placeholder="How can we help?" cols="30" rows="8"></textarea>
+            </div>
+            <div class="form-col">
+                <button>Send Message</button>
+            </div>
+        </div>
+    </section>
+   
+
+    <footer>
+        <div class="footer-col">
+            <h3>Top Products</h3>
+            <li>Online Courses</li>
+            <li>Ebooks & Guides</li>
+            <li>Career Services</li>
+            <li>Tech Tools & Software</li>
+        </div>
+        <div class="footer-col">
+            <h3>Quick Links</h3>
+            <li>Support</li>
+            <li>FAQS</li>
+            <li>Privacy Policy</li>
+            <li>Terms of Service</li>
+        </div>
+        <div class="footer-col">
+            <h3>Features</h3>
+            <li>Scholarship Opportunities</li>
+            <li>Certification Programs</li>
+            <li>Resource Library Accesss</li>
+            <li>Popular Courses</li>
+        </div>
+        <div class="footer-col">
+            <h3>Resources</h3>
+            <li>Guides</li>
+            <li>Cheat Sheets</li>
+            <li>API Documentation</li>
+            <li>Tool Reviews</li>
+        </div>
+
+        <div class="footer-col">
+            <h3>Newsletter</h3>
+            <p>You Can Trust Us. We Only Send Promo Offers!</p>
+            <div class="subscribe">
+                <input type="text" placeholder="Your Email Address" id="sub-email">
+                <a href="#" class="yellow" id="subscribe-btn">SUBSCRIBE</a>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>Copyright &copy; 2024 All rights reserved | This template is made with <span><i class="fa-solid fa-heart"></i></span> by <span>Tech Educa</span></p>
+            <div class="pro-links">
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-linkedin-in"></i>
+            </div>
+        </div>
+      </footer>
+
+
+
+    <script>
+        $('#menu-btn').click(function() {
+            $('nav .navigation ul').addClass('active');
+        });
+    
+        $('#menu-close').click(function() {
+            $('nav .navigation ul').removeClass('active');
+        });
+
+     //for subsribed email store in local storage
+    document.getElementById("subscribe-btn").addEventListener("click", function(event) {
+        event.preventDefault(); // Prevent default anchor action
+    
+        var subEmail = document.getElementById("sub-email").value.trim(); // Get the email input value
+    
+        // Simple email validation
+        if (subEmail !== "" && subEmail.indexOf("@") !== -1 && subEmail.indexOf(".") !== -1) {
+            // Get existing emails from local storage or initialize an empty array
+            var emails = JSON.parse(localStorage.getItem("subscribers")) || [];
+            
+            // Add the new email if it's not already in the list
+            if (!emails.includes(subEmail)) {
+                emails.push(subEmail); // Add email to the array
+                localStorage.setItem("subscribers", JSON.stringify(emails)); // Save updated array
+                alert("Thank you for subscribing!"); // Show confirmation
+                document.getElementById("sub-email").value = ""; // Clear the input field
+            } else {
+                alert("This email is already subscribed."); // Alert if email is already present
+            }
+        } else {
+            alert("Please enter a valid email address."); // Show error message
+        }
+    });
+    </script>
+</body>
+</html>
