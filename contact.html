@@ -20,37 +20,37 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="blog.html">Blog</a></li>
-                <li><a href="Course.html">Courses</a></li>
-                <li><a class="active" href="contact.hmtl">Contact</a></li>
+                <li><a href="course.html">Courses</a></li>
+                <li><a class="active" href="contact.html">Contact</a></li>
             </ul>
             <img src="/Assets/images/menu.png" alt="" id="menu-btn">
         </div>
      </nav>
 
 
-    <div class="contact-pic">
+     <div class="contact-pic">
         <p class="con">Contact</p>
     </div>
     <section id="contact">
         <div class="getin">
             <h2>Get in touch</h2>
-            <p>Looking for help fill the form and start a new adventure. </p>
-            
+            <p>Looking for help? Fill the form and start a new adventure.</p>
+    
             <div class="getin-details">
                 <h3>Headquarters</h3>
                 <div>
                     <i class="fa-solid fa-house"></i>
-                    <p>744 New York Ave, Brookyn, kings, New York 10224</p>
+                    <p>744 New York Ave, Brooklyn, Kings, New York 10224</p>
                 </div>
                 <h3>Phone</h3>
                 <div>
                     <i class="fa-solid fa-phone"></i>
-                    <p> 02334434454554 <br> 232324455555</p>
+                    <p>02334434454554 <br> 232324455555</p>
                 </div>
                 <h3>Support</h3>
                 <div>
                     <i class="fa-solid fa-envelope"></i>
-                    <p> tech@fjgfgjfgnf.com  | 121223@mail.com</p>
+                    <p>tech@fjgfgjfgnf.com | 121223@mail.com</p>
                 </div>
                 <h3>Follow Us</h3>
                 <div class="pro-links">
@@ -58,25 +58,25 @@
                     <i class="fa-brands fa-instagram"></i>
                     <i class="fa-brands fa-linkedin"></i>
                     <i class="fa-brands fa-stripe"></i>
-                    <!-- 4 links  -->
                 </div>
             </div>
         </div>
+    
         <div class="form">
             <h4>Let's Connect </h4>
-            <p>Integer at lorem eget diam facilidss as id mass ed</p>
+            <p>Integer at lorem eget diam facilisis as id massa</p>
             <div class="form-row">
-                <input type="text" placeholder="Your Name">
-                <input type="text" placeholder="Email">
+                <input type="text" id="name" placeholder="Your Name">
+                <input type="email" id="email" placeholder="Email">
             </div>
             <div class="form-col">
-                <input type="text" placeholder="Subject">
+                <input type="text" id="subject" placeholder="Subject">
             </div>
             <div class="form-col">
-                <textarea name="" id="" placeholder="How can we help?" cols="30" rows="8"></textarea>
+                <textarea id="message" placeholder="How can we help?" cols="30" rows="8"></textarea>
             </div>
             <div class="form-col">
-                <button>Send Message</button>
+                <button id="send-message">Send Message</button>
             </div>
         </div>
     </section>
@@ -118,8 +118,8 @@
             <h3>Newsletter</h3>
             <p>You Can Trust Us. We Only Send Promo Offers!</p>
             <div class="subscribe">
-                <input type="text"  placeholder="Your Email Address" id="">
-                <a href="#" class="yellow">SUBSCRIBE</a>
+                <input type="text" placeholder="Your Email Address" id="sub-email">
+                <a href="#" class="yellow" id="subscribe-btn">SUBSCRIBE</a>
             </div>
         </div>
 
@@ -168,6 +168,63 @@
             alert("Please enter a valid email address."); // Show error message
         }
     });
+
+    // Function to save form data to local storage
+function saveFormData() {
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const subject = document.getElementById('subject').value;
+    const message = document.getElementById('message').value;
+
+    // Check if all fields are filled
+    if (name === "" || email === "" || subject === "" || message === "") {
+        alert("Please fill in all fields before submitting.");
+        return;
+    }
+
+    // Save form data in local storage
+    localStorage.setItem('name', name);
+    localStorage.setItem('email', email);
+    localStorage.setItem('subject', subject);
+    localStorage.setItem('message', message);
+
+    // Set a flag to show the "Message has been sent" alert after page reload
+    localStorage.setItem('formSubmitted', 'true');
+
+    // Trigger page reload
+    window.location.reload();
+}
+
+// Function to load form data from local storage
+function loadFormData() {
+    const savedName = localStorage.getItem('name');
+    const savedEmail = localStorage.getItem('email');
+    const savedSubject = localStorage.getItem('subject');
+    const savedMessage = localStorage.getItem('message');
+
+    // If saved data exists, populate the form fields
+    if (savedName) document.getElementById('name').value = savedName;
+    if (savedEmail) document.getElementById('email').value = savedEmail;
+    if (savedSubject) document.getElementById('subject').value = savedSubject;
+    if (savedMessage) document.getElementById('message').value = savedMessage;
+
+    // Check if the form was submitted and show the alert
+    if (localStorage.getItem('formSubmitted') === 'true') {
+        alert("Message has been sent!");
+
+        // Remove the flag after showing the alert
+        localStorage.removeItem('formSubmitted');
+    }
+}
+
+// Add event listener to the "Send Message" button
+document.getElementById('send-message').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent default form submission
+    saveFormData(); // Save form data and refresh page
+});
+
+// Load saved form data when the page loads
+window.onload = loadFormData;
     </script>
 </body>
 </html>

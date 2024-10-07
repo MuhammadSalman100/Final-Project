@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "title": "Exploring JavaScript Frameworks",
+    "content": "JavaScript frameworks have become crucial tools for modern web development. In this post, we dive into the most popular frameworks like React, Angular, and Vue.",
+    "author": "John Doe",
+    "date": "2024-10-01",
+    "image": "https://www.whizsolutions.co.uk/wp-content/uploads/2018/08/JS.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Why Learn Python?",
+    "content": "Python has emerged as one of the most versatile and easy-to-learn programming languages. This post discusses why you should consider adding Python to your skillset.",
+    "author": "Jane Smith",
+    "date": "2024-10-02",
+    "image": "https://www.datasciencecentral.com/wp-content/uploads/2021/10/9430449274.png"
+  },
+  {
+    "id": 3,
+    "title": "A Beginner's Guide to Web Design",
+    "content": "Web design is all about creating user-friendly and visually appealing websites. Learn the basics of UI/UX design and how to create an engaging experience for users.",
+    "author": "Emily Clark",
+    "date": "2024-10-03",
+    "image": "https://th.bing.com/th/id/OIP.mdKJwxRwCN2eGwRGig4l6wHaEK?rs=1&pid=ImgDetMain"
+  },
+  {
+    "id": 4,
+    "title": "Top 5 CSS Techniques for Modern Web",
+    "content": "In this article, we cover the top 5 CSS techniques every web developer should know to make their pages stand out with advanced styling and effects.",
+    "author": "Michael Johnson",
+    "date": "2024-10-04",
+    "image": "https://cdn.mos.cms.futurecdn.net/Vp9WvV7YKdH4k8sKRePcE8.jpg"
+  },
+  {
+    "id": 5,
+    "title": "The Rise of No-Code Development Platforms",
+    "content": "No-code development platforms are revolutionizing how applications are built. This post explores the benefits and limitations of using no-code tools.",
+    "author": "Sarah Lee",
+    "date": "2024-10-05",
+    "image": "https://zvolv.com/blog/wp-content/uploads/2020/02/Image3.png"
+  },
+  {
+    "id": 6,
+    "title": "Understanding Machine Learning Algorithms",
+    "content": "Machine learning algorithms are the backbone of AI. In this post, we break down key algorithms such as decision trees, neural networks, and clustering.",
+    "author": "John Doe",
+    "date": "2024-10-06",
+    "image": "https://disabilityinsider.com/wp-content/uploads/2021/02/Machine-Learning-Concept-838x525.jpg"
+  },
+  {
+    "id": 7,
+    "title": "Building Mobile Apps with Flutter",
+    "content": "Flutter has gained popularity as a cross-platform mobile development framework. Learn how to get started and build your first app using Flutter.",
+    "author": "Jane Smith",
+    "date": "2024-10-07",
+    "image": "https://th.bing.com/th/id/R.d7e789c3b8bcb2b7880dd3b4b1d3edd6?rik=ytog4A4XipK5yA&riu=http%3a%2f%2ftechnobrains.io%2fwp-content%2fuploads%2f2021%2f07%2fflutter-Featured-Blog-Image2.jpg&ehk=qNtlUWmyUkVCjiGvmi7dbdWp32XXAQM3qbdnfOtyuBw%3d&risl=&pid=ImgRaw&r=0"
+  },
+  {
+    "id": 8,
+    "title": "Cybersecurity Practices for Developers",
+    "content": "Security is a critical aspect of web development. This post outlines the top cybersecurity best practices every developer should follow.",
+    "author": "Emily Clark",
+    "date": "2024-10-08",
+    "image": "https://opennettechnologies.com/wp-content/uploads/2023/09/proxy-image-1.jpg"
+  },
+  {
+    "id": 9,
+    "title": "Importance of Responsive Web Design",
+    "content": "Responsive design ensures your website looks great on all devices. Learn the basics of responsive web design and why it’s essential in today’s mobile-first world.",
+    "author": "Michael Johnson",
+    "date": "2024-10-09",
+    "image": "https://th.bing.com/th/id/OIP.FV3cr6w1twbhfIHghAJicwAAAA?rs=1&pid=ImgDetMain"
+  },
+  {
+    "id": 10,
+    "title": "How to Optimize Website Performance",
+    "content": "Website performance is key to user experience and SEO. In this post, we explore tips and techniques to optimize your website's speed and efficiency.",
+    "author": "Sarah Lee",
+    "date": "2024-10-10",
+    "image": "https://th.bing.com/th/id/R.d8e4a0c6d6af6ceb2cc3e636bba3fcdf?rik=E9rPQC%2bOSpsKag&riu=http%3a%2f%2fwww.seotraffichero.com%2fwp-content%2fuploads%2f2018%2f07%2fWebsite-Performance.jpg&ehk=0Guu3Y9YEZll45NXwQQimTaPx%2fRtStmyrsR9D7KHWcs%3d&risl=&pid=ImgRaw&r=0"
+  }
+]

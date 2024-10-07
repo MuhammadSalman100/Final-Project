@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+
+    <link rel="stylesheet" href="Course.css">
+    <link rel="icon" href="/assets/images/graduation.png" type="image/png">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        /* Global Tags */
+        
+        h1{
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: rgb(35, 35, 85);
+        }
+        span{
+            font-size: .9rem;
+            color: #757373;
+        }
+        h6{
+            font-size: 1.1rem;
+            color: rgb(24, 24, 49);
+        }
+        /* navigation */
+nav{
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1vw 8vw;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+    z-index: 100;
+}
+nav img{
+    width: 150px;
+    cursor: pointer;
+}
+nav .navigation{
+    display: flex;
+}
+#menu-btn{
+    width: 30px;
+    height: 30px;
+    display: none;
+}
+
+#menu-close{
+    display: none;
+}
+nav .navigation ul{
+    display: flex;
+    justify-content: flex-end;
+    align-self: center;
+}
+nav .navigation ul li{
+    list-style: none;
+    margin-left: 30px;
+}
+nav .navigation ul li a{
+    text-decoration: none;
+    color: rgb(21, 21, 100);
+    font-size: 16px;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+nav .navigation ul li a.active,
+nav .navigation ul li a:hover{
+    color: #fdc93B;
+}
+
+
+
+/* Hero-section */
+
+#home{
+    background-image: linear-gradient( rgba(9, 5, 54, 0.3), rgba(5, 4, 46,0.7)), url("/Assets/images/back1.jpg");
+    width: 100%;
+    height: 60vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 40px;
+}
+#home h2{
+    color: #fff;
+    font-size: 3rem;
+    letter-spacing: 1px;
+}
+#home p{
+    width: 50%;
+    color: #fff;
+    font-size: 1.1rem;
+    line-height: 30px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    font-weight: 500;
+}
+#home a{
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 13px 35px;
+    background-color: #fff;
+    font-weight: 600;
+    border-radius: 5px;
+}
+#home .btn{
+    margin-top: 30px;
+}
+#home a.blue{
+    color: #fff;
+    background-color: rgb(21, 21, 100);
+    transition: 0.3s ease;
+}
+#home a.blue:hover{
+    color: #fdc93B;
+    background-color: #fff;
+}
+#home a.yellow{
+    color: #fff;
+    background-color: #fdc93B;
+    transition: 0.3s ease;
+}
+#home a.yellow:hover{
+    color: rgb(21, 21, 100);
+    background-color: #fff;
+}
+h1 {
+    margin: 0;
+}
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+    grid-gap: 40px;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.blog-post {
+    background-color: #f7f7ff;
+    margin: 20px 0;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+.blog-post h2 {
+    margin-top: 0;
+    color: rgb(21, 21, 100);
+    font-size: 2rem;
+    padding: 10px 0px;
+    text-decoration: underline #5838fc;
+}
+.blog-post p {
+    color: #64626e;
+    font-size: 1.2rem;
+    font-weight: 450;
+    padding: 10px 0px;
+}
+.blog-post small {
+    color: #5838fc;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.cont{
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    padding: 0 10vw 8vw 10vw;
+}
+
+#comment-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #5838fc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+#submit-comment {
+    background-color: #5838fc;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 4px;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#submit-comment:hover {
+    background-color: #563dcf;
+}
+
+#comments-display {
+    margin-top: 20px;
+    padding: 15px; /* Increased padding around the comments container */
+    border: 1px solid #5838fc;
+    border-radius: 4px;
+    background-color: #f7f7ff;
+    width: 100%;
+}
+#comments-display div {
+    padding: 10px 0px;
+}
+.cont h2{
+    color: rgb(21, 21, 100);
+    font-size: 2rem;
+    padding: 10px 0px;
+    text-decoration: underline #5838fc;
+}
+
+.comment p {
+    margin: 5px 0;
+    color: #64626e;
+}
+
+* fOOTER */
+
+footer{
+    padding: 8vw;
+    background-color: #101c32;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.footer-col{
+    padding-bottom: 40px;
+}
+footer h3{
+    color: rgb(241, 240, 245);
+    font-weight: 600;
+    padding-bottom: 20px;
+}
+footer li{
+    list-style: none;
+    color: #7b838a;
+    padding: 10px 0;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    font-weight: 500;
+}
+footer li:hover{
+    color: rgb(241, 240, 245);
+}
+footer p{
+    color: #7b838a;
+}
+footer .subscribe{
+    margin-top: 20px;
+}
+footer input{
+    width: 220px;
+    padding: 15px 12px;
+    background-color: #334f6c;
+    border: none;
+    outline: none;
+    color: #fff;
+}
+footer input::placeholder{
+    color: #fff;
+}
+footer .subscribe a{
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 12px 17px;
+    background-color: #fff;
+    font-weight: 600;
+}
+footer .subscribe a.yellow{
+    color: #fff;
+    background-color: #fdc93B;
+    transition: 0.3s ease;
+}
+footer .subscribe a.yellow:hover{
+    color: rgb(21, 21, 100);
+    background-color: #fff;
+}
+footer .copyright{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
+footer .copyright p{
+    color: #fff;
+}
+footer .copyright p span{
+    color: #fdc93B;
+}
+
+footer .copyright .pro-links i{
+    cursor: pointer;
+    transition: 0.3s ease;
+    background-color: #334f6c;
+    color: #fff;
+}
+footer .copyright .pro-links i:hover{
+    background-color: #fdc93B;
+    color: rgb(21, 21, 100);
+}
+
+/* maedia quries */
+@media (max-width:769px) {
+    nav{
+        padding: 15px 20px;
+    }
+    nav img{
+        width: 130px;
+    }
+    #menu-btn{
+        display: initial;
+    }
+    
+    #menu-close{
+        display: initial;
+        font-size: 1.6rem;
+        color: #fff;
+        padding: 30px 0px 20px 20px;
+    }
+    nav .navigation ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        top: 0;
+        right: -220px;
+        width: 220px;
+        background-color: rgba(17, 20, 104, 0.45);
+        backdrop-filter: blur(4.5px);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        height: 100vh;
+        position: absolute;
+        transition: 0.3s ease;
+    }
+    nav .navigation ul.active{
+        right: 0;
+    }
+    nav .navigation ul li{
+        padding: 20px 0px 20px 40px;
+        margin-left: 0;
+    }
+    nav .navigation ul li a{
+        color: #fff;
+    }
+    #home{
+        padding-top: 0px;
+    }
+    #home p{
+        width: 90%;
+    }
+    #home a.yellow {
+        letter-spacing: 1.5px;
+    }
+    #home a.blue {
+        letter-spacing: 1.5px;
+    }
+}
+@media (max-width:665px) {
+    .container{
+        grid-template-columns: repeat(1, minmax(200px, 1fr));
+        grid-gap: 40px;
+    }
+    .container img{
+        height: 300px;
+        width: 300px;
+    }
+    .blog-post p {
+        color: #64626e;
+        font-size: 1rem;
+    }
+    .blog-post small {
+        font-size: 1rem;
+    }
+    .blog-post h2 {
+        font-size: 1.6rem;
+    }
+    
+
+}
+
+@media (max-width:475px) {
+    .container{
+        grid-template-columns: repeat(1, minmax(200px, 1fr));
+        grid-gap: 40px;
+    }
+    .blog-post p {
+        color: #64626e;
+        font-size: 1rem;
+        font-weight: 450;
+    }
+    .container img{
+        height: 300px;
+        width: 220px;
+    }
+    .blog-post p {
+        color: #64626e;
+        font-size: 1rem;
+    }
+    .blog-post small {
+        font-size: 1rem;
+    }
+    .blog-post h2 {
+        font-size: 1.6rem;
+    }
+}
+@media (max-width:399px) {
+    footer .subscribe {
+        display: flex;
+        margin-top: 20px;
+        flex-direction: column;
+    }
+    footer .subscribe a.yellow {
+        margin-top: 10px;
+        width: 220px;
+        text-align: center;
+    }
+    footer input::placeholder {
+        text-align: center;
+    }
+}
+
+
+</style>
+</head>
+<body>
+    <!-- Navigation -->
+     <nav>
+        <img src="/Assets/images/logo.svg" alt="" on onclick="window.location.href='index.html';">
+        <div class="navigation">
+            <ul>
+                <i id="menu-close" class="fa-sharp fa-solid fa-xmark"></i>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a class="active" href="blog.html">Blog</a></li>
+                <li><a href="course.html">Courses</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <img src="/Assets/images/menu.png" alt="" id="menu-btn">
+        </div>
+     </nav>
+
+     <!-- Hero-section -->
+
+     <section id="home">
+        <h2>Blog TechEduca</h2>
+     </section>
+    <div class="container" id="blog-container">
+        <!-- Blog posts will be inserted here dynamically -->
+    </div>
+
+    <div class="cont">
+        <h2>Comments:</h2>
+        <input type="text" id="comment-input" placeholder="Enter your comment">
+        <a href="#" id="submit-comment">Submit Comment</a>
+        <div id="comments-display"></div>
+    </div>
+    
+    
+
+    <!-- Footer-section -->
+
+    <footer>
+        <div class="footer-col">
+            <h3>Top Products</h3>
+            <li>Online Courses</li>
+            <li>Ebooks & Guides</li>
+            <li>Career Services</li>
+            <li>Tech Tools & Software</li>
+        </div>
+        <div class="footer-col">
+            <h3>Quick Links</h3>
+            <li>Support</li>
+            <li>FAQS</li>
+            <li>Privacy Policy</li>
+            <li>Terms of Service</li>
+        </div>
+        <div class="footer-col">
+            <h3>Features</h3>
+            <li>Scholarship Opportunities</li>
+            <li>Certification Programs</li>
+            <li>Resource Library Accesss</li>
+            <li>Popular Courses</li>
+        </div>
+        <div class="footer-col">
+            <h3>Resources</h3>
+            <li>Guides</li>
+            <li>Cheat Sheets</li>
+            <li>API Documentation</li>
+            <li>Tool Reviews</li>
+        </div>
+
+        <div class="footer-col">
+            <h3>Newsletter</h3>
+            <p>You Can Trust Us. We Only Send Promo Offers!</p>
+            <div class="subscribe">
+                <input type="text" placeholder="Your Email Address" id="sub-email">
+                <a href="#" class="yellow" id="subscribe-btn">SUBSCRIBE</a>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>Copyright &copy; 2024 All rights reserved | This template is made with <span><i class="fa-solid fa-heart"></i></span> by <span>Tech Educa</span></p>
+            <div class="pro-links">
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-linkedin-in"></i>
+            </div>
+        </div>
+      </footer>
+
+
+    <script>
+    // Fetch blog posts from a local JSON file or API
+fetch('posts.json')  // Replace with your API endpoint if necessary
+.then(response => response.json())
+.then(posts => {
+    const blogContainer = document.getElementById('blog-container');
+    
+    posts.forEach(post => {
+        // Create blog post elements dynamically
+        const postDiv = document.createElement('div');
+        postDiv.classList.add('blog-post');
+
+        const postTitle = document.createElement('h2');
+        postTitle.textContent = post.title;
+
+        const postImage = document.createElement('img');
+        postImage.src = post.image;  // Add image from JSON
+        postImage.style.Width = '450px';
+        postImage.style.height = '250px';
+        postImage.style.border = '4px solid #5838fc';
+
+
+        const postContent = document.createElement('p');
+        postContent.textContent = post.content;
+
+        const postAuthor = document.createElement('small');
+        postAuthor.textContent = `By ${post.author} on ${post.date}`;
+
+        // Append elements to the blog post container
+        postDiv.appendChild(postTitle);
+        postDiv.appendChild(postImage);  // Add image to the post
+        postDiv.appendChild(postContent);
+        postDiv.appendChild(postAuthor);
+
+        blogContainer.appendChild(postDiv);
+    });
+})
+.catch(error => {
+    const blogContainer = document.getElementById('blog-container');
+    blogContainer.innerHTML = '<p>Sorry, we could not load the blog posts at this moment. Please try again later.</p>';
+    console.error('Error fetching the blog posts:', error);
+});
+
+
+
+            $('#menu-btn').click(function() {
+                $('nav .navigation ul').addClass('active');
+            });
+        
+            $('#menu-close').click(function() {
+                $('nav .navigation ul').removeClass('active');
+            });
+    
+//for subsribed email store in local storage
+document.getElementById("subscribe-btn").addEventListener("click", function(event) {
+    event.preventDefault(); // Prevent default anchor action
+
+    var subEmail = document.getElementById("sub-email").value.trim(); // Get the email input value
+
+    // Simple email validation
+    if (subEmail !== "" && subEmail.indexOf("@") !== -1 && subEmail.indexOf(".") !== -1) {
+        // Get existing emails from local storage or initialize an empty array
+        var emails = JSON.parse(localStorage.getItem("subscribers")) || [];
+        
+        // Add the new email if it's not already in the list
+        if (!emails.includes(subEmail)) {
+            emails.push(subEmail); // Add email to the array
+            localStorage.setItem("subscribers", JSON.stringify(emails)); // Save updated array
+            alert("Thank you for subscribing!"); // Show confirmation
+            document.getElementById("sub-email").value = ""; // Clear the input field
+        } else {
+            alert("This email is already subscribed."); // Alert if email is already present
+        }
+    } else {
+        alert("Please enter a valid email address."); // Show error message
+    }
+});
+
+
+function setCookie(name, value, days) {
+    const date = new Date();
+    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+    const expires = "expires=" + date.toUTCString();
+    document.cookie = name + "=" + value + ";" + expires + ";path=/";
+}
+function getCookie(name) {
+    const nameEQ = name + "=";
+    const ca = document.cookie.split(';');
+    for(let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) === 0) return decodeURIComponent(c.substring(nameEQ.length, c.length));
+    }
+    return null;
+}
+function displayComments() {
+    const comments = getCookie('comments');
+    const commentsDisplay = document.getElementById("comments-display");
+    commentsDisplay.innerHTML = ""; // Clear previous comments
+
+    if (comments) {
+        const commentArray = comments.split("||");
+        commentArray.forEach(comment => {
+            const commentDiv = document.createElement('div');
+            commentDiv.textContent = comment; // Display each comment
+            commentsDisplay.appendChild(commentDiv);
+        });
+    } else {
+        commentsDisplay.textContent = "No comments yet.";
+    }
+}
+document.getElementById("submit-comment").addEventListener("click", function(event) {
+    event.preventDefault(); // Prevent the default anchor tag behavior
+
+    const commentInput = document.getElementById("comment-input").value;
+    if (!commentInput) {
+        alert("Please enter a comment.");
+        return;
+    }
+
+    // Get existing comments from the cookie
+    let comments = getCookie('comments');
+    comments = comments ? comments + "||" + commentInput : commentInput; // Append new comment
+
+    // Set the updated comments back to the cookie
+    setCookie('comments', encodeURIComponent(comments), 7); // Store cookie for 7 days
+    alert("Comment added!");
+
+    // Refresh comment display
+    displayComments();
+
+    // Clear input field
+    document.getElementById("comment-input").value = "";
+});
+displayComments(); // Display comments on page load
+    </script>
+</body>
+</html>

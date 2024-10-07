@@ -619,6 +619,24 @@ footer .copyright .pro-links i:hover{
     #experts{
         margin-top: 15px;
     }
+    /* Course-inner */
+    #course-inner{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 8vw 4vw;
+    }
+    #course-inner .overview{
+        width: 100%;
+    }
+    #course-inner .overview .course-img{
+        width: 100%;
+        height: 100%;
+    }
+    #course-inner .enroll{
+        margin-top: 25px;
+    }
 }
 @media (max-width:475px) {
     #registration{
@@ -636,5 +654,31 @@ footer .copyright .pro-links i:hover{
         margin-top: 20px;
         margin-bottom: 20px;
     }
-
+    #course-inner .overview .course-head .c-name{
+        width: 50%;
+    }
+    #course-inner .overview .course-head .c-name h2{
+        font-size: 22px;
+    }
+    #course-inner .overview .course-head span{
+        font-size: 22px;
+    }
+    #course-inner .enroll{
+        width: 100%;
+    }
+}
+@media (max-width:399px) {
+    footer .subscribe {
+        display: flex;
+        margin-top: 20px;
+        flex-direction: column;
+    }
+    footer .subscribe a.yellow {
+        margin-top: 10px;
+        width: 220px;
+        text-align: center;
+    }
+    footer input::placeholder {
+        text-align: center;
+    }
 }

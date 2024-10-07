@@ -305,6 +305,7 @@ footer .copyright p span{
     cursor: pointer;
 }
 
+
 footer .copyright .pro-links i{
     cursor: pointer;
     transition: 0.3s ease;
@@ -522,7 +523,7 @@ footer .copyright .pro-links i:hover{
   .container img {
     padding-left: 0.3rem;
   }
-  e3 .right-content {
+   .right-content {
     margin-top: 0;
     margin-left: 6%;
     margin-right: 6%;
@@ -537,5 +538,20 @@ footer .copyright .pro-links i:hover{
   }
   .right-content h1 {
     font-size: 2rem;
+  }
+}
+@media (max-width:399px) {
+  footer .subscribe {
+      display: flex;
+      margin-top: 20px;
+      flex-direction: column;
+  }
+  footer .subscribe a.yellow {
+      margin-top: 10px;
+      width: 220px;
+      text-align: center;
+  }
+  footer input::placeholder {
+      text-align: center;
   }
 }

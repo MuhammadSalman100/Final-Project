@@ -29,7 +29,7 @@
                 <li><a href="about.html">About</a></li>
                 <li><a href="blog.html">Blog</a></li>
                 <li><a class="active" href="course.html">Courses</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="contact.hmtl">Contact</a></li>
             </ul>
             <img src="/Assets/images/menu.png" alt="" id="menu-btn">
         </div>
@@ -135,7 +135,7 @@
             <li>Tool Reviews</li>
         </div>
 
-       <div class="footer-col">
+        <div class="footer-col">
             <h3>Newsletter</h3>
             <p>You Can Trust Us. We Only Send Promo Offers!</p>
             <div class="subscribe">
@@ -165,6 +165,31 @@
         $('#menu-close').click(function() {
             $('nav .navigation ul').removeClass('active');
         });
+
+        //for subsribed email store in local storage
+    document.getElementById("subscribe-btn").addEventListener("click", function(event) {
+        event.preventDefault(); // Prevent default anchor action
+    
+        var subEmail = document.getElementById("sub-email").value.trim(); // Get the email input value
+    
+        // Simple email validation
+        if (subEmail !== "" && subEmail.indexOf("@") !== -1 && subEmail.indexOf(".") !== -1) {
+            // Get existing emails from local storage or initialize an empty array
+            var emails = JSON.parse(localStorage.getItem("subscribers")) || [];
+            
+            // Add the new email if it's not already in the list
+            if (!emails.includes(subEmail)) {
+                emails.push(subEmail); // Add email to the array
+                localStorage.setItem("subscribers", JSON.stringify(emails)); // Save updated array
+                alert("Thank you for subscribing!"); // Show confirmation
+                document.getElementById("sub-email").value = ""; // Clear the input field
+            } else {
+                alert("This email is already subscribed."); // Alert if email is already present
+            }
+        } else {
+            alert("Please enter a valid email address."); // Show error message
+        }
+    });
     </script>
 </body>
 </html>

@@ -509,5 +509,19 @@ footer .copyright .pro-links i:hover{
         margin-top: 20px;
         margin-bottom: 20px;
     }
-
+}
+@media (max-width:399px) {
+    footer .subscribe {
+        display: flex;
+        margin-top: 20px;
+        flex-direction: column;
+    }
+    footer .subscribe a.yellow {
+        margin-top: 10px;
+        width: 220px;
+        text-align: center;
+    }
+    footer input::placeholder {
+        text-align: center;
+    }
 }
