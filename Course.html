@@ -14,35 +14,35 @@
     <link rel="icon" href="/assets/images/graduation.png" type="image/png">
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 <body>
      <!-- Navigation -->
      <nav>
-    <img src="Assets/images/logo.svg" alt="">
-    <div class="navigation">
-      <ul>
-        <i id="menu-close" class="fa-sharp fa-solid fa-xmark"></i>
-        <li><a href="index.html" class="nav-button">Home</a></li>
-        <li><a class="active nav-button" href="about.html">About</a></li>
-        <li><a class="nav-button" href="blog.html">Blog</a></li>
-        <li><a class="nav-button" href="course.html">Courses</a></li>
-        <li><a class="nav-button" href="contact.html">Contact</a></li>
-      </ul>
-      <img src="Assets/images/menu.png" alt="" id="menu-btn">
-    </div>
-  </nav>
-  
-  <div class="page" id="rotateOut">Redirecting...</div>
+        <img src="/Assets/images/logo.svg" alt="" on onclick="window.location.href='index.html';">
+        <div class="navigation">
+            <ul>
+                <i id="menu-close" class="fa-sharp fa-solid fa-xmark"></i>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a class="active" href="course.html">Courses</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <img src="/Assets/images/menu.png" alt="" id="menu-btn">
+        </div>
+     </nav>
 
      <!-- Hero-section -->
 
      <section id="home">
-        <h2>Courses TechEduca</h2>
+        <h2 class="animate__animated animate__fadeInDown">Courses TechEduca</h2>
      </section>
 
 
      <!-- Popular-Courses -->
-      <section id="course">
+      <section id="course" class="section-to-animate zoomIn animate__animated animate__delay-0.5s">
         <h1>Popular Courses</h1>
         <p>Empowering your tech journey with expert insights and practical learning.</p>
         <div class="course-box">
@@ -328,6 +328,37 @@
         } else {
             alert("Please enter a valid email address."); // Show error message
         }
+    });
+
+    document.addEventListener("DOMContentLoaded", function() {
+        // Define the animations based on the classes
+        const animations = [
+            { class: 'fade-in', animation: 'animate__fadeIn' },
+            { class: 'slide-in-left', animation: 'animate__slideInLeft' },
+            { class: 'zoomIn', animation: 'animate__zoomIn' },
+        ];
+
+        // Create an Intersection Observer instance
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animations.forEach(anim => {
+                        if (entry.target.classList.contains(anim.class)) {
+                            entry.target.classList.add(anim.animation);
+                            observer.unobserve(entry.target); // Stop observing after animation
+                        }
+                    });
+                }
+            });
+        }, {
+            threshold: 0.1 // Trigger the animation when 10% of the section is visible
+        });
+
+        // Observe all sections with the class 'section-to-animate'
+        const sections = document.querySelectorAll('.section-to-animate');
+        sections.forEach(section => {
+            observer.observe(section);
+        });
     });
     </script>
 </body>

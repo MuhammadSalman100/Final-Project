@@ -12,7 +12,9 @@
     <link rel="stylesheet" href="Course.css">
     <link rel="icon" href="/assets/images/graduation.png" type="image/png">
 
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script> 
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
@@ -40,75 +42,54 @@
             font-size: 1.1rem;
             color: rgb(24, 24, 49);
         }
-/* navigation */
-nav {
-  position: fixed;
-  width: 100%;
-  background-color: #fff;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1vw 8vw;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
-  z-index: 100;
+        /* navigation */
+nav{
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1vw 8vw;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+    z-index: 100;
+}
+nav img{
+    width: 150px;
+    cursor: pointer;
+}
+nav .navigation{
+    display: flex;
+}
+#menu-btn{
+    width: 30px;
+    height: 30px;
+    display: none;
 }
 
-nav img {
-  width: 150px;
-  cursor: pointer;
+#menu-close{
+    display: none;
 }
-
-nav .navigation {
-  display: flex;
+nav .navigation ul{
+    display: flex;
+    justify-content: flex-end;
+    align-self: center;
 }
-
-#menu-btn {
-  width: 30px;
-  height: 30px;
-  display: none;
+nav .navigation ul li{
+    list-style: none;
+    margin-left: 30px;
 }
-
-#menu-close {
-  display: none;
+nav .navigation ul li a{
+    text-decoration: none;
+    color: rgb(21, 21, 100);
+    font-size: 16px;
+    font-weight: 500;
+    transition: 0.3s ease;
 }
-
-nav .navigation ul {
-  display: flex;
-  justify-content: flex-end;
-  align-self: center;
-}
-
-nav .navigation ul li {
-  list-style: none;
-  margin-left: 30px;
-}
-
-.nav-button {
-  position: relative;
-  display: inline-block;
-  padding: 10px 15px;
-  text-decoration: none;
-  color: rgb(35, 35, 85); 
-  font-weight: 500;
-}
-
-.nav-button:hover {
-  transform: rotate(360deg); 
-  font-size: large; 
-}
-
-nav .navigation ul li a {
-  text-decoration: none;
-  color: rgba(35, 35, 85);
-  font-size: 16px;
-  font-weight: 500;
-  transition: 0.3s ease;
-}
-
-nav .navigation ul li a:active,
-nav .navigation ul li a:hover {
-  color: #fdc93b;
+nav .navigation ul li a.active,
+nav .navigation ul li a:hover{
+    color: #fdc93B;
 }
 
 
@@ -477,31 +458,32 @@ footer .copyright .pro-links i:hover{
 </style>
 </head>
 <body>
-   <nav>
-    <img src="Assets/images/logo.svg" alt="">
-    <div class="navigation">
-      <ul>
-        <i id="menu-close" class="fa-sharp fa-solid fa-xmark"></i>
-        <li><a href="index.html" class="nav-button">Home</a></li>
-        <li><a class="active nav-button" href="about.html">About</a></li>
-        <li><a class="nav-button" href="blog.html">Blog</a></li>
-        <li><a class="nav-button" href="course.html">Courses</a></li>
-        <li><a class="nav-button" href="contact.html">Contact</a></li>
-      </ul>
-      <img src="Assets/images/menu.png" alt="" id="menu-btn">
-    </div>
-  </nav>
-  
-  <div class="page" id="rotateOut">Redirecting...</div>
+    <!-- Navigation -->
+     <nav>
+        <img src="/Assets/images/logo.svg" alt="" on onclick="window.location.href='index.html';">
+        <div class="navigation">
+            <ul>
+                <i id="menu-close" class="fa-sharp fa-solid fa-xmark"></i>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a class="active" href="blog.html">Blog</a></li>
+                <li><a href="course.html">Courses</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <img src="/Assets/images/menu.png" alt="" id="menu-btn">
+        </div>
+     </nav>
 
      <!-- Hero-section -->
 
      <section id="home">
-        <h2>Blog TechEduca</h2>
+        <h2 class="animate__animated animate__fadeInDown">Blog TechEduca</h2>
      </section>
+     <div class="section-to-animate slideInUp animate__animated">
     <div class="container" id="blog-container">
         <!-- Blog posts will be inserted here dynamically -->
     </div>
+</div>
 
     <div class="cont">
         <h2>Comments:</h2>
@@ -699,6 +681,37 @@ document.getElementById("submit-comment").addEventListener("click", function(eve
     document.getElementById("comment-input").value = "";
 });
 displayComments(); // Display comments on page load
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Define the animations based on the classes
+    const animations = [
+        { class: 'fade-in', animation: 'animate__fadeIn' },
+        { class: 'slide-in-left', animation: 'animate__slideInLeft' },
+        { class: 'slideInUp', animation: 'animate__slideInUp' },
+    ];
+
+    // Create an Intersection Observer instance
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animations.forEach(anim => {
+                    if (entry.target.classList.contains(anim.class)) {
+                        entry.target.classList.add(anim.animation);
+                        observer.unobserve(entry.target); // Stop observing after animation
+                    }
+                });
+            }
+        });
+    }, {
+        threshold: 0.1 // Trigger the animation when 10% of the section is visible
+    });
+
+    // Observe all sections with the class 'section-to-animate'
+    const sections = document.querySelectorAll('.section-to-animate');
+    sections.forEach(section => {
+        observer.observe(section);
+    });
+});
     </script>
 </body>
 </html>

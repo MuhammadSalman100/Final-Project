@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Final Project</title>
+    <title>About Page</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -13,29 +13,30 @@
     <link rel="icon" href="graduation.png" type="image/png">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <link rel="icon" href="/assets/images/graduation.png" type="image/png">
+
 </head>
 <body>
 
      <!-- Navigation -->
-    
-   <nav>
-    <img src="Assets/images/logo.svg" alt="">
-    <div class="navigation">
-      <ul>
-        <i id="menu-close" class="fa-sharp fa-solid fa-xmark"></i>
-        <li><a href="index.html" class="nav-button">Home</a></li>
-        <li><a class="active nav-button" href="about.html">About</a></li>
-        <li><a class="nav-button" href="blog.html">Blog</a></li>
-        <li><a class="nav-button" href="course.html">Courses</a></li>
-        <li><a class="nav-button" href="contact.html">Contact</a></li>
-      </ul>
-      <img src="Assets/images/menu.png" alt="" id="menu-btn">
-    </div>
-  </nav>
-  
-  <div class="page" id="rotateOut">Redirecting...</div>
+     <nav>
+     <img src="/Assets/images/logo.svg" alt="" on onclick="window.location.href='index.html';">
+      <div class="navigation">
+          <ul>
+              <i id="menu-close" class="fa-sharp fa-solid fa-xmark"></i>
+              <li><a href="index.html">Home</a></li>
+              <li><a class="active" href="about.html">About</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="course.html">Courses</a></li>
+              <li><a href="contact.html">Contact</a></li>
+          </ul>
+          <img src="Assets/images/menu.png" alt="" id="menu-btn">
+      </div>
+   </nav>
     <section id="home">
-      <h2>About Tech Educa</h2>
+      <h2 class="animate__animated animate__fadeInDown">About Tech Educa</h2>
       <div class="btn">
       </div>
    </section>
@@ -79,7 +80,7 @@
     </section>
 
 
-     <section id="features">
+     <section id="features" class="section-to-animate slide-in-left animate__animated">
         <h1>Awesome features</h1>
         <p>Empowering your tech journey with expert insights and practical learning.</p>
         <div class="fea-base">
@@ -100,7 +101,7 @@
             </div>
         </div>
      </section>
-    <section id="trust">
+    <section id="trust" class="section-to-animate zoomIn animate__animated">
       <h1>Trusted By</h1>
       <p>
         Trusted by thousands of learners and industry leaders, we are dedicated to providing top-quality education and resources that empower individuals to achieve their goals.
@@ -195,6 +196,37 @@
             alert("Please enter a valid email address."); // Show error message
         }
     });  
+
+    document.addEventListener("DOMContentLoaded", function() {
+      // Define the animations based on the classes
+      const animations = [
+          { class: 'fade-in', animation: 'animate__fadeIn' },
+          { class: 'slide-in-left', animation: 'animate__slideInLeft' },
+          { class: 'zoomIn', animation: 'animate__zoomIn' },
+      ];
+
+      // Create an Intersection Observer instance
+      const observer = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                  animations.forEach(anim => {
+                      if (entry.target.classList.contains(anim.class)) {
+                          entry.target.classList.add(anim.animation);
+                          observer.unobserve(entry.target); // Stop observing after animation
+                      }
+                  });
+              }
+          });
+      }, {
+          threshold: 0.1 // Trigger the animation when 10% of the section is visible
+      });
+
+      // Observe all sections with the class 'section-to-animate'
+      const sections = document.querySelectorAll('.section-to-animate');
+      sections.forEach(section => {
+          observer.observe(section);
+      });
+  });
     </script>
   </body>
 </html>
