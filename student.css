@@ -300,48 +300,45 @@ footer .copyright .pro-links i:hover{
     #home p{
         width: 90%;
     }
-    #home a.yellow {
-        letter-spacing: 1.5px;
+    #pdf-section li a {
+        width: auto;
+        justify-content: center;
     }
-    #home a.blue {
-        letter-spacing: 1.5px;
+    #video-section iframe {
+        width: auto;
+        justify-content: center;
     }
-    #features{
-        padding: 8vw 4vw 0vw 4vw;
+}
+@media (max-width:490px) {
+    #pdf-section li a {
+        width: auto;
+        justify-content: center;
     }
-    #course{
-        padding: 8vw 4vw 8vw 4vw;
-    }
-    #registration{
-        padding: 6vw 4vw 6vw 4vw;
-    }
-    #registration .reminder .time{
-        display: flex;
-        flex-wrap: wrap;
-        margin-top: 40px;
-    }
-    #experts{
-        margin-top: 15px;
+    #video-section iframe {
+        width: auto;
+        justify-content: center;
     }
 }
 @media (max-width:475px) {
-    #registration{
-        display: flex;
-        flex-direction: column;
+    #pdf-section li a {
+        width: auto;
         justify-content: center;
-        align-items: center;
-        text-align: center;
     }
-    #registration .reminder .time{
-        display: flex;
-        flex-wrap: wrap;
+    #video-section iframe {
+        width: auto;
         justify-content: center;
-        align-items: center;
-        margin-top: 20px;
-        margin-bottom: 20px;
     }
 }
 @media (max-width:399px) {
+
+    #pdf-section li a {
+        width: 280px;
+        justify-content: center;
+    }
+    #video-section iframe {
+        width: 280px;
+        justify-content: center;
+    }
     footer .subscribe {
         display: flex;
         margin-top: 20px;
