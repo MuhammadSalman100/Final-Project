@@ -1,0 +1,243 @@
+
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins";
+}
+
+/* Global Tags */
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: rgb(35, 35, 85);
+}
+span {
+  font-size: 0.9rem;
+  color: #757373;
+}
+h6 {
+  font-size: 1.1rem;
+  color: rgb(24, 24, 49);
+}
+/* navigation */
+nav{
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1vw 8vw;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+    z-index: 100;
+}
+nav img{
+    width: 150px;
+    cursor: pointer;
+}
+nav .navigation{
+    display: flex;
+}
+#menu-btn{
+    width: 30px;
+    height: 30px;
+    display: none;
+}
+
+#menu-close{
+    display: none;
+}
+nav .navigation ul{
+    display: flex;
+    justify-content: flex-end;
+    align-self: center;
+}
+nav .navigation ul li{
+    list-style: none;
+    margin-left: 30px;
+}
+nav .navigation ul li a{
+    text-decoration: none;
+    color: rgb(21, 21, 100);
+    font-size: 16px;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+nav .navigation ul li a.active,
+nav .navigation ul li a:hover{
+    color: #fdc93B;
+}
+
+.main-heading{
+    text-align: center;
+    padding-top: 180px;
+    font-size: 60px;
+    color: #f9f9f9;
+}
+.conact{
+    height: 400px;
+    width: 100% ;
+    background-image: url(https://github.com/MuhammadSalman100/Final-Project/blob/main/Assets/images/back1.jpg?raw=true);
+    background-size: cover;
+}
+.faq-section {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.faq-item {
+    margin-bottom: 20px;
+}
+
+.faq-item h3 {
+    background-color: rgb(21, 21, 100);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.faq-item h3:hover {
+    background-color: #fdc93B;
+}
+
+.faq-item p {
+    display: none;
+    padding: 10px;
+    border-left: 3px solid   rgb(21, 21, 100)   ;
+    background-color: #f9f9f9;
+    margin-top: 0;
+}
+
+.faq-item.active h3 {
+    background-color: #fdc93B    ;
+}
+
+
+
+footer{
+    padding: 8vw;
+    background-color: #101c32;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.footer-col{
+    padding-bottom: 40px;
+}
+footer h3{
+    color: rgb(241, 240, 245);
+    font-weight: 600;
+    padding-bottom: 20px;
+}
+footer li{
+    list-style: none;
+    color: #7b838a;
+    padding: 10px 0;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    font-weight: 500;
+}
+footer li:hover{
+    color: rgb(241, 240, 245);
+}
+footer p{
+    color: #7b838a;
+}
+footer .subscribe{
+    margin-top: 20px;
+}
+footer input{
+    width: 220px;
+    padding: 15px 12px;
+    background-color: #334f6c;
+    border: none;
+    outline: none;
+    color: #fff;
+}
+footer input::placeholder{
+    color: #fff;
+}
+footer .subscribe a{
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 12px 17px;
+    background-color: #fff;
+    font-weight: 600;
+}
+footer .subscribe a.yellow{
+    color: #fff;
+    background-color: #fdc93B;
+    transition: 0.3s ease;
+}
+footer .subscribe a.yellow:hover{
+    color: rgb(21, 21, 100);
+    background-color: #fff;
+}
+footer .copyright{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
+footer .copyright p{
+    color: #fff;
+}
+footer .copyright p span{
+    color: #fdc93B;
+}
+
+footer .copyright .pro-links i{
+    cursor: pointer;
+    transition: 0.3s ease;
+    background-color: #334f6c;
+    color: #fff;
+}
+footer .copyright .pro-links i:hover{
+    background-color: #fdc93B;
+    color: rgb(21, 21, 100);
+}
+
+footer .copyright .pro-links i{
+    cursor: pointer;
+    transition: 0.3s ease;
+    background-color: #334f6c;
+    color: #fff;
+}
+footer .copyright .pro-links i:hover{
+    background-color: #fdc93B;
+    color: rgb(21, 21, 100);
+}
+
+
+/* Responsive design */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    .faq-section {
+        padding: 15px;
+    }
+
+    .faq-item h3 {
+        font-size: 16px;
+    }
+}
