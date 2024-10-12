@@ -42,68 +42,50 @@
             font-size: 1.1rem;
             color: rgb(24, 24, 49);
         }
-       /* navigation */
-nav {
-  position: fixed;
-  width: 100%;
-  background-color: #fff;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1vw 4vw;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
-  z-index: 100;
+        /* navigation */
+nav{
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1vw 8vw;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+    z-index: 100;
+}
+nav img{
+    width: 150px;
+    cursor: pointer;
+}
+nav .navigation{
+    display: flex;
+}
+#menu-btn{
+    width: 30px;
+    height: 30px;
+    display: none;
 }
 
-nav img {
-  width: 150px;
-  cursor: pointer;
+#menu-close{
+    display: none;
 }
-
-nav .navigation {
-  display: flex;
+nav .navigation ul{
+    display: flex;
+    justify-content: flex-end;
+    align-self: center;
 }
-
-#menu-btn {
-  width: 30px;
-  height: 30px;
-  display: none;
+nav .navigation ul li{
+    list-style: none;
+    margin-left: 30px;
 }
-
-#menu-close {
-  display: none;
-}
-
-nav .navigation ul {
-  display: flex;
-  justify-content: flex-end;
-  align-self: center;
-}
-
-nav .navigation ul li {
-  list-style: none;
-  margin-left: 20px;
-}
-
-.nav-button {
-  position: relative;
-  color: rgb(35, 35, 85);
-  font-weight: 500;
-}
-
-.nav-button:hover {
-  transform: rotate(360deg);
-  font-size: large;
-}
-
-nav .navigation ul li a {
-  text-decoration: none;
-  color: rgba(35, 35, 85);
-  font-size: 16px;
-  font-weight: 500;
-  transition: 0.3s ease;
-  padding: 1rem;
+nav .navigation ul li a{
+    text-decoration: none;
+    color: rgb(21, 21, 100);
+    font-size: 16px;
+    font-weight: 500;
+    transition: 0.3s ease;
 }
 nav .navigation ul li a.active,
 nav .navigation ul li a:hover{
@@ -478,22 +460,22 @@ footer .copyright .pro-links i:hover{
 <body>
     <!-- Navigation -->
      <nav>
-      <img src="images/logo.svg" alt="" />
-      <div class="navigation">
-        <ul>
-          <i id="menu-close" class="fa-sharp fa-solid fa-xmark"></i>
-          <li><a href="index.html" class="nav-button">Home</a></li>
-          <li><a class="nav-button" href="about.html">About</a></li>
-          <li><a class="nav-button" href="blog.html">Blog</a></li>
-          <li><a class="nav-button" href="course.html">Courses</a></li>
-          <li><a class="nav-button" href="contact.html">Contact</a></li>
-          <li><a class="nav-button active" href="testimonials.html">Testimonials</a></li>
-          <li><a class="nav-button" href="student.html">Resources</a></li>
-          <li><a class="nav-button" href="faq.html">FAQS</a></li>
-        </ul>
-        <img src="images/menu.png" alt="" id="menu-btn" />
-      </div>
-    </nav>
+        <img src="/Assets/images/logo.svg" alt="" on onclick="window.location.href='index.html';">
+        <div class="navigation">
+            <ul>
+                <i id="menu-close" class="fa-sharp fa-solid fa-xmark"></i>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a class="active" href="blog.html">Blog</a></li>
+                <li><a href="course.html">Courses</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="student.html">Resources</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+            </ul>
+            <img src="/Assets/images/menu.png" alt="" id="menu-btn">
+        </div>
+     </nav>
+
      <!-- Hero-section -->
 
      <section id="home">
