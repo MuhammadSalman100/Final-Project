@@ -10,7 +10,12 @@ body {
 }
 
 /* Global Tags */
-
+.animate__animated.animate__fadeInDown {
+  --animate-duration: 1.5s;
+}
+.animate__animated.animate__lightSpeedInLeft {
+  --animate-duration: 1.5s;
+}
 h1 {
   font-size: 2.5rem;
   font-weight: 700;
