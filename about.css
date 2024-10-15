@@ -158,7 +158,7 @@ nav .navigation ul li a:active , nav .navigation ul li a:hover {
   padding: 1.5rem 0 0 1.6rem;
 }
 .feature-item img {
-  width: 5vw;
+width: auto;
   height: 12vh;
   margin-top: 1rem;
   margin-left: 0.9rem;
