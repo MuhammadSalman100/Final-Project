@@ -87,11 +87,12 @@ nav .navigation ul li a:hover{
     padding-top: 40px;
 }
 .con{
-    font-size: 60px;
+    font-size: 3rem;
     text-align: center;
-    padding: 200px;
+    margin: 0px auto;
     color: white;
-    font-weight: 800    ;
+    font-weight: 800;
+    width: 100%;
 
 }
 #contact{
